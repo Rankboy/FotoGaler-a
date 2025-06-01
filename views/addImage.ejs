@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <form action="/search" method="GET">
+  <label>
+    Image
+    <input type="text" name="image" />
+  </label>
+
+  <label>
+    Start-Date
+    <input type="date" name="startDate" />
+  </label>
+
+  <label>
+    End-Date
+    <input type="date" name="endDate" />
+  </label>
+
+  <button type="submit">SEARCH</button>
+</form>
+    <h1>Galleria de imagenes</h1>
+    <p>Añadir una nueva imagen</p>
+    <form action="/addImage" method="POST" enctype="multipart/form-data">
+        <label for="image">Selecciona una imagen:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <button type="submit">Subir Imagen</button>
+        <button type="delete">Eliminar Imagen</button>
+    </form>
+</html>
