@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/views/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <title>Simple HTML Page</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Oxygen:wght@300;400;700&family=Savate:ital,wght@0,200..900;1,200..900&display=swap');
+        </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>PixelWood</title>
 </head>
 <body>
-    <h1>Galleria de imagenes</h1>
-    <a href="http://localhost:8080/addImage">Añadir una nueva imagen</a>
-    <p>Eliminar imagen</p>
+    <nav class="navbar">
+        <img src="/images/logo.png" alt="PixelWood Logo" class="logo" height="80">
+        <h1>Galería de imágenes</h1>
+        <ul>
+            <li><a href="/"><i class="fas fa-home"></i></a></li>
+            <li><a href="/addImage"><i class="fas fa-image"></i></a></li>
+            <li><a href="/deleteImage"><i class="fas fa-trash"></i></a></li>
+        </ul>
+    </nav>
+</body>
 </html>

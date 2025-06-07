@@ -4,9 +4,11 @@ const upload = require('express-fileupload'); // <-- aquí
 const path = require('path');
 
 var app = express();
+app.use(express.static(__dirname));
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -19,7 +21,7 @@ const imageArray = [];
 
 // index page
 app.get("/", (req, res) => {
-  res.render("./views/index.ejs", { title: "Home" });
+  res.render("index", { title: "Home" });
 });
 
 // Add Image page
@@ -52,4 +54,4 @@ app.get('/404', function(req, res) {
 });
 
 app.listen(8080);
-console.log('8080 is the magic port');
+console.log('8080 es el puerto mágico a Pixelwood');
