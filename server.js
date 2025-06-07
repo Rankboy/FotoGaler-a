@@ -19,7 +19,7 @@ const imageArray = [];
 
 // index page
 app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
+  res.render("./views/index.ejs", { title: "Home" });
 });
 
 // Add Image page
