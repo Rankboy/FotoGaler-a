@@ -1,10 +1,19 @@
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 const morgan = require('morgan');
 const upload = require('express-fileupload'); // <-- aquí
 const path = require('path');
 
 var app = express();
 app.use(express.static(__dirname));
+
+// Punto de entrada al layout general
+app.use(expressLayouts);
+app.set('layout','./layouts/layout.ejs')
+
+// set the public folder for css
+app.use(express.static('public'))
+app.use('/public',express.static(__dirname + 'public'))
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
