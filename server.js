@@ -21,7 +21,7 @@ const imageArray = [];
 
 // index page
 app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
+  res.render("index", { title: "PixelWood" });
 });
 
 // Add Image page
@@ -45,6 +45,15 @@ app.post('/addImage', (req, res) => {
     imageArray.push('/uploads/' + image.name);
 
     res.redirect('/'); // o renderizar el EJS con la galería
+  });
+});
+
+// Las imagenes almacenadas en el array se pasan al html
+
+app.get("/", (req, res) => {
+  res.render("index", {
+    title: "Home",
+    imagenes: imageArray // Pasás el array al template
   });
 });
 
