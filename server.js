@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
 
 // Add Image page
 app.get('/addImage', function(req, res) {
-    res.render('addImage');
+    res.render('addImage', { title: "PixelWood" });
 });
 
 // Subida de imagen
@@ -68,7 +68,7 @@ app.get("/", (req, res) => {
 
 // 404 page
 app.get('/404', function(req, res) {
-    res.render('404');
+    res.render('404', {title: 'PixelWood'});
 });
 
 app.listen(8080);
